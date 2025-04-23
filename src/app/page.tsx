@@ -1,7 +1,10 @@
-import { EnhancedPredictionMarketDashboard } from "@/components/enhanced-prediction-market-dashboard";
+import Hero from "@/components/landing/hero";
 
 export default function Home() {
   return (
-    <EnhancedPredictionMarketDashboard />
+    // <EnhancedPredictionMarketDashboard />
+    <div>
+      <Hero />
+    </div>
   );
 }
