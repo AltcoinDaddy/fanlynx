@@ -1,12 +1,12 @@
 'use client'
 
-import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { contract } from '@/constants/contract'
 import { useReadContract } from 'thirdweb/react'
+import { contract } from '@/constants/contract'
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
 import { MarketCard } from './marketCard'
-
-import { Footer } from "../landing/footer"
+import { Navbar } from './navbar'
 import { MarketCardSkeleton } from './market-card-skeleton'
+import { Footer } from "./footer"
 
 export function EnhancedPredictionMarketDashboard() {
     const { data: marketCount, isLoading: isLoadingMarketCount } = useReadContract({
@@ -21,16 +21,15 @@ export function EnhancedPredictionMarketDashboard() {
     ));
 
     return (
-        <div className="">
+        <div className="min-h-screen flex flex-col">
             <div className="flex-grow container mx-auto p-4">
+                <Navbar />
                 <div className="mb-4">
-                    {/* <Image 
+                    <img 
                         src="https://placehold.co/800x300" 
                         alt="Placeholder Banner" 
                         className="w-full h-auto rounded-lg" 
-                        width={800}
-                        height={300}
-                    /> */}
+                    />
                 </div>
                 <Tabs defaultValue="active" className="w-full">
                     <TabsList className="grid w-full grid-cols-3">
