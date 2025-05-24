@@ -13,8 +13,8 @@ const montserrat = Montserrat({
 });
 
 export const metadata: Metadata = {
-  title: "Fanlynx Betting",
-  description: "Fanlynx Betting Site- A Simple and Secure Betting Platform",
+  title: "Fanlynx",
+  description: "Fanlynx Predictions Site- A Simple and Secure Platform",
 };
 
 export default function RootLayout({
