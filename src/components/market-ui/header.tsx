@@ -1,5 +1,3 @@
-import { Button } from '@/components/ui/button';
-import { ChevronDown } from 'lucide-react';
 import { FC } from 'react';
 
 
@@ -22,17 +20,7 @@ const Header: FC = () => {
          
         </div>
 
-        {/* Navigation and Authentication */}
-        <div className="flex items-center space-x-2">
-          {/* More Menu */}
-          <Button variant="ghost" className="text-gray-300 flex items-center">
-            More <ChevronDown className="ml-1 h-4 w-4" />
-          </Button>
-          
-          {/* Authentication Button */}
-          
-        
-        </div>
+
       </div>
     </header>
   );
