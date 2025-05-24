@@ -1,18 +1,28 @@
 import { client } from "@/app/client";
 import { getContract } from "thirdweb";
-import { baseSepolia } from "thirdweb/chains";
+import { defineChain } from "thirdweb/chains";
+import { createWallet, inAppWallet } from "thirdweb/wallets";
 
-export const contractAddress = "0x124D803F8BC43cE1081110a08ADd1cABc5c83a3f";
-export const tokenAddress = "0x4D9604603527322F44c318FB984ED9b5A9Ce9f71";
+export const chilizChainId = 88888;
+export const contractAddress = "0x39fa5ab558799b2636fd110e10cfa93111ad6f1b";
+export const tokenAddress = "0xBd5bABA6EB9591e12dfBb8C044b177832B1E6DB0";
 
 export const contract = getContract({
     client: client,
-    chain: baseSepolia,
+    chain: defineChain(chilizChainId),
     address: contractAddress
 });
 
 export const tokenContract = getContract({
     client: client,
-    chain: baseSepolia,
+    chain: defineChain(chilizChainId),
     address: tokenAddress
 });
+
+
+export const wallets = [
+  inAppWallet(),
+  createWallet("io.metamask"),
+  createWallet("io.zerion.wallet"),
+  // createWallet("io.")
+]
