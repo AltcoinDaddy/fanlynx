@@ -13,7 +13,7 @@ const MarketTabs = ({ marketCount, isLoading }: Props) => {
   const skeletonCards = Array.from({ length: 6 }, (_, index) => (
     <MarketCardSkeleton key={index} />
   ));
-
+  
   const marketCountNumber = Number(marketCount || 0);
   const hasNoMarkets = !isLoading && marketCountNumber === 0;
 
@@ -60,7 +60,11 @@ const MarketTabs = ({ marketCount, isLoading }: Props) => {
     return (
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
         {Array.from({ length: marketCountNumber }, (_, index) => (
-          <MarketCard key={index} index={index} filter={filter as "active" | "pending" | "resolved"} />
+          <MarketCard
+            key={index}
+            index={index}
+            filter={filter as "active" | "pending" | "resolved"}
+          />
         ))}
       </div>
     );

@@ -15,6 +15,7 @@ export function EnhancedPredictionMarketDashboard() {
         method: "function marketCount() view returns (uint256)",
         params: []
     })
+
     return (
         <div className="min-h-screen flex flex-col bg-[#0A0C14] text-white w-full">
               <Header />
